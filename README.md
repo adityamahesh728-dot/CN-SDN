@@ -11,6 +11,18 @@ Implement static routing paths using an SDN controller:
 - Validate packet delivery.
 - Document routing behavior.
 - Add a regression test to ensure the selected path remains unchanged after rule reinstall.
+ ## Screenshots
+
+### Network Topology & Ryu Controller
+![Ryu Topology](CNimg/Ryu.png)
+
+### Connectivity Validation (Pingall)
+![Pingall Results](CNimg/pingall.png)
+
+### Flow Rules & Performance
+![Flow Control](CNimg/Flowcontrol.png)
+![Performance Metrics](CNimg/performance.png)
+
 
 ## Topology
 
@@ -107,15 +119,4 @@ python3 -m unittest discover -s tests
 ```
 
 The test `test_h1_to_h2_path_is_regression_locked` fails if the required `h1 -> h2` path changes from `s1 -> s2 -> s4`.
-## Screenshots
-
-### Network Topology & Ryu Controller
-![Ryu Topology](CNimg/Ryu.png)
-
-### Connectivity Validation (Pingall)
-![Pingall Results](CNimg/pingall.png)
-
-### Flow Rules & Performance
-![Flow Control](CNimg/Flowcontrol.png)
-![Performance Metrics](CNimg/performance.png)
 
